@@ -172,7 +172,7 @@ class _HomePageState extends State<HomePage> {
             ),
           ),
           child: Padding(
-            padding: const EdgeInsets.only(top: 40),
+            padding: const EdgeInsets.only(top: 20),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.center,
@@ -307,7 +307,7 @@ class _HomePageState extends State<HomePage> {
                                             _giveMeAHint = false;
                                           }
                                         } else {
-                                          _responseMessage = 'You dindn\'t guess the number, please try againg...';
+                                          _responseMessage = 'You dindn\'t guess the number, please try again...';
                                           _enableTextField = false;
                                           _giveMeAHint = false;
                                           _enableRestart = true;
