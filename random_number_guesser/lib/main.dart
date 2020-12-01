@@ -99,7 +99,7 @@ class _HomePageState extends State<HomePage> {
               textAlign: TextAlign.center,
             ),
             content: Text(
-              'It was ' + _previousUserInput,
+              'It was $_previousUserInput',
               style: TextStyle(
                 fontWeight: FontWeight.w600,
                 fontSize: 24,
