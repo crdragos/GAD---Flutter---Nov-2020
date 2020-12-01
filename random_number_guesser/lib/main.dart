@@ -296,7 +296,7 @@ class _HomePageState extends State<HomePage> {
                                       if (_isValidInput(_userInput)) {
                                         if (_currentTry < _MAXIMUM_NUMBER_OF_TRIES) {
                                           _previousUserInput = _userInput;
-                                          _responseMessage = 'You tried ' + _userInput;
+                                          _responseMessage = 'You tried $_userInput';
                                           _currentTry++;
                                           if (_myRandomNumber == int.tryParse(_userInput)) {
                                             _hintMessage = 'You guessed right, congrats!';
