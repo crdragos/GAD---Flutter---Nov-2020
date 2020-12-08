@@ -4,6 +4,9 @@ on: push
 jobs:
   format:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        module: [ basic_phrases, currency_converter, number_shapes, random_number_guesser, tic_tac_toe ]
     steps:
       - name: Install Flutter
         uses: subosito/flutter-action@v1
@@ -13,10 +16,15 @@ jobs:
       - name: Setup repository
         run: flutter pub get
       - name: Format code
-        run: flutter pub pub run --enable-asserts ci/bots/format.dart --set-exit-if-changed -n -l 120
+        run: |
+          cd ${{ matrix.module }}
+          flutter pub pub run --enable-asserts ci/bots/format.dart --set-exit-if-changed -n -l 120
 
   analyze:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        module: [ basic_phrases, currency_converter, number_shapes, random_number_guesser, tic_tac_toe ]
     steps:
       - name: Install Flutter
         uses: subosito/flutter-action@v1
@@ -26,4 +34,6 @@ jobs:
       - name: Setup repository
         run: flutter pub get
       - name: Analyze code
-        run: flutter pub pub run --enable-asserts ci/bots/analyze.dart
+        run: |
+          cd ${{ matrix.module }}
+          flutter pub pub run --enable-asserts ci/bots/analyze.dart
