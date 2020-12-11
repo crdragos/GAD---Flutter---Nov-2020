@@ -17,8 +17,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: ThemeData(
-        primaryColor: const Color(0xFF3EBACE),
-        accentColor: const Color(0xFFD8ECF1),
+        primaryColor: Colors.black,
+        accentColor: Colors.orange[200],
         scaffoldBackgroundColor: const Color(0xFFF3F5F7),
       ),
       debugShowCheckedModeBanner: false,
@@ -405,6 +405,7 @@ class _HomePageState extends State<HomePage> {
                   fontSize: 14.0,
                   fontWeight: FontWeight.w600,
                   letterSpacing: 1.2,
+                  color: Colors.white,
                 ),
               ),
             ),
