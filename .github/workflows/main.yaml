@@ -6,7 +6,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        module: [ currency_converter, number_shapes, random_number_guesser, tic_tac_toe, movies ]
+        module: [ movies ]
     steps:
       - name: Install Flutter
         uses: subosito/flutter-action@v1
@@ -24,7 +24,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        module: [ currency_converter, number_shapes, random_number_guesser, tic_tac_toe, movies ]
+        module: [ movies ]
     steps:
       - name: Install Flutter
         uses: subosito/flutter-action@v1
