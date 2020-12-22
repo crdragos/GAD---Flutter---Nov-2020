@@ -39,8 +39,8 @@ class _HomePageState extends State<HomePage> {
 
   final Random _random = Random();
   final TextEditingController _controller = TextEditingController();
-
   static const int _MAXIMUM_NUMBER_OF_HINTS = 3;
+
   static const int _MAXIMUM_NUMBER_OF_TRIES = 10;
 
   bool _giveMeAHint = false;
