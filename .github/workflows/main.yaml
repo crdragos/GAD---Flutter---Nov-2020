@@ -6,7 +6,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        module: [ movies ]
+        module: [ movies_with_redux ]
     steps:
       - name: Install Flutter
         uses: subosito/flutter-action@v1
@@ -24,7 +24,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        module: [ movies ]
+        module: [ movies_with_redux ]
     steps:
       - name: Install Flutter
         uses: subosito/flutter-action@v1
